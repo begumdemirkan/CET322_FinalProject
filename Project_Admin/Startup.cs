@@ -13,6 +13,7 @@ using Microsoft.EntityFrameworkCore;
 using Project_Admin.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Project_Admin.Models;
 
 namespace Project_Admin
 {
@@ -38,8 +39,8 @@ namespace Project_Admin
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
-            services.AddDefaultIdentity<IdentityUser>()
-                .AddDefaultUI(UIFramework.Bootstrap4)
+                services.AddDefaultIdentity<Userr>().AddRoles<IdentityRole>()
+                  .AddDefaultUI(UIFramework.Bootstrap4)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
             services.Configure<IdentityOptions>(options =>

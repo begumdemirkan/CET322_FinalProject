@@ -5,16 +5,17 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Project_Admin.Models;
 
+
 namespace Project_Admin.Data
 {
-    public class ApplicationDbContext : IdentityDbContext
+    public class ApplicationDbContext : IdentityDbContext<Userr>
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
         }
 
-        public DbSet<Userr> Users { get; set; }
+        public DbSet<Userr> Userrs { get; set; }
 
         public DbSet<Category> Categories { get; set; }
 
