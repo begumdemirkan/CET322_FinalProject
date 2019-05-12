@@ -28,6 +28,7 @@
     <!-- Main CSS-->
     <link href="~/css/theme.css" rel="stylesheet" media="all">
 </head>
+@RenderBody()
 <body class="animsition">
     <div class="page-wrapper">
         <!-- HEADER MOBILE-->
@@ -150,14 +151,14 @@
                             </ul>
                         </li>
                     </ul>
-                   
+
                 </div>
             </nav>
         </header>
-        @RenderBody()
+
         <!-- END HEADER MOBILE-->
         <!-- MENU SIDEBAR-->
-       
+
         <aside class="menu-sidebar d-none d-lg-block">
             <div class="logo">
                 <a href="#">
@@ -191,7 +192,7 @@
                                 <i class="fas fa-chart-bar"></i>Charts
                             </a>
                         </li>
-                      
+
                         <li>
                             <a href="table.html">
                                 <i class="fas fa-table"></i>Tables
@@ -449,7 +450,7 @@
                             </div>
                         </div>
                     </div>
-                  
+
                 </div>
 
             </header>
@@ -1029,6 +1030,13 @@
     @RenderSection("Scripts", required: false)
 </body>
 </html>
+
+
+
+
+
+
+
 <!-- end document-->
 @*<!DOCTYPE html>
     <html>
