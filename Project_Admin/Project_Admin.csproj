@@ -7,33 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="wwwroot\Admin\**" />
-    <Content Remove="wwwroot\Admin\**" />
-    <EmbeddedResource Remove="wwwroot\Admin\**" />
-    <None Remove="wwwroot\Admin\**" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="Views\Shop\Index.cshtml" />
-    <None Include="wwwroot\Shop\fonts\fontawesome-webfont.svg" />
-    <None Include="wwwroot\Shop\fonts\fontawesome-webfont.woff2" />
-    <None Include="wwwroot\Shop\fonts\glyphicons-halflings-regular.woff2" />
-    <None Include="wwwroot\Shop\js\bootstrap.js" />
-    <None Include="wwwroot\Shop\js\creditly.js" />
-    <None Include="wwwroot\Shop\js\demo.js" />
-    <None Include="wwwroot\Shop\js\easing.js" />
-    <None Include="wwwroot\Shop\js\easy-responsive-tabs.js" />
-    <None Include="wwwroot\Shop\js\imagezoom.js" />
-    <None Include="wwwroot\Shop\js\jquery-2.2.3.min.js" />
-    <None Include="wwwroot\Shop\js\jquery-ui.js" />
-    <None Include="wwwroot\Shop\js\jquery.desoslide.min.js" />
-    <None Include="wwwroot\Shop\js\jquery.flexslider.js" />
-    <None Include="wwwroot\Shop\js\main.js" />
-    <None Include="wwwroot\Shop\js\minicart.js" />
-    <None Include="wwwroot\Shop\js\move-top.js" />
-    <None Include="wwwroot\Shop\js\numscroller-1.0.js" />
-    <None Include="wwwroot\Shop\js\scrolling-nav.js" />
-    <None Include="wwwroot\Shop\js\SmoothScroll.min.js" />
+    <Compile Remove="wwwroot\web\**" />
+    <Content Remove="wwwroot\web\**" />
+    <EmbeddedResource Remove="wwwroot\web\**" />
+    <None Remove="wwwroot\web\**" />
   </ItemGroup>
 
 
@@ -41,6 +18,11 @@
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.0" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
   </ItemGroup>
 
 </Project>
