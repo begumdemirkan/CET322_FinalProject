@@ -4,6 +4,7 @@
 @{
     ViewData["Title"] = "Log in";
     //Layout = "~/Views/Shared/_LayoutLogin.cshtml";
+    Layout = null;
 
 }
 
@@ -96,7 +97,8 @@
     <!-- Title Page-->
     <title>Login</title>
     <!-- Fontfaces CSS-->
-    <link href="css/font-face.css" rel="stylesheet" media="all">
+    <link href="~/
+          css/font-face.css" rel="stylesheet" media="all">
     <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
     <link href="vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
     <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
@@ -111,7 +113,7 @@
     <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
     <link href="vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
     <!-- Main CSS-->
-    <link href="css/theme.css" rel="stylesheet" media="all">
+    <link href="~/css/theme.css" rel="stylesheet" media="all">
 </head>
 <body class="animsition">
     <div class="page-wrapper">
@@ -126,30 +128,48 @@
                         </div>
                         <div class="login-form">
                             <form action="" method="post">
+
+                                <div asp-validation-summary="All" class="text-danger"></div>
                                 <div class="form-group">
-                                    <label>Email Address</label>
-                                    <input class="au-input au-input--full" type="email" name="email" placeholder="Email">
-                                </div>
-                                <div class="form-group">
-                                    <label>Password</label>
-                                    <input class="au-input au-input--full" type="password" name="password" placeholder="Password">
-                                </div>
-                                <div class="login-checkbox">
-                                    <label>
-                                        <input type="checkbox" name="remember">Remember Me
-                                    </label>
-                                    <label>
-                                        <a href="#">Forgotten Password?</a>
-                                    </label>
-                                </div>
-                                <button class="au-btn au-btn--block au-btn--green m-b-20" type="submit">sign in</button>
-                                <div class="social-login-content">
-                                    <div class="social-button">
-                                        <button class="au-btn au-btn--block au-btn--blue m-b-20">sign in with facebook</button>
-                                        <button class="au-btn au-btn--block au-btn--blue2">sign in with twitter</button>
+                                    <label asp-for="Input.Email"></label>
+                                    <div class="au-input au-input--full">
+                                        
+                                        <input asp-for="Input.Email" class="form-control" />
+                                        <span asp-validation-for="Input.Email" class="text-danger"></span>
                                     </div>
-                                </div>
-                            </form>
+
+                                </div><div class="form-group">
+                                        <label asp-for="Input.Password"></label>
+                                 <div class="au-input au-input--full">
+                                        <input asp-for="Input.Password" class="form-control" />
+                                        <span asp-validation-for="Input.Password" class="text-danger"></span>
+                                    </div>
+                                 </div>
+                                    @*<div class="form-group">
+            <label>Email Address</label>
+            <input class="au-input au-input--full" type="email" name="email" placeholder="Email">
+            <span asp-validation-for="Input.Email" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label>Password</label>
+            <input class="au-input au-input--full" type="password" name="password" placeholder="Password">
+        </div>*@
+                                    <div class="login-checkbox">
+                                        <label>
+                                            <input type="checkbox" name="remember">Remember Me
+                                        </label>
+                                        <label>
+                                            <a href="#">Forgotten Password?</a>
+                                        </label>
+                                    </div>
+                                    <button class="au-btn au-btn--block au-btn--green m-b-20" type="submit">sign in</button>
+                                    <div class="social-login-content">
+                                        <div class="social-button">
+                                            <button class="au-btn au-btn--block au-btn--blue m-b-20">sign in with facebook</button>
+                                            <button class="au-btn au-btn--block au-btn--blue2">sign in with twitter</button>
+                                        </div>
+                                    </div>
+</form>
                             <div class="register-link">
                                 <p>
                                     Don't you have account?

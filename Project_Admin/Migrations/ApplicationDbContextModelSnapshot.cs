@@ -254,39 +254,10 @@ namespace Project_Admin.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Brand");
-
-                    b.Property<int>("CategoryId");
-
-                    b.Property<DateTime>("CreateDate");
-
-                    b.Property<int>("CreateUserId");
-
-                    b.Property<string>("Description");
-
-                    b.Property<decimal>("Discount")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<string>("ImageUrl");
-
-                    b.Property<bool>("IsActive");
-
-                    b.Property<string>("Model");
-
-                    b.Property<string>("Name");
-
-                    b.Property<decimal>("Price")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<int>("Stock");
-
-                    b.Property<DateTime?>("UpdateDate");
-
-                    b.Property<int?>("UpdateUserId");
+                    b.Property<string>("Name")
+                        .IsRequired();
 
                     b.HasKey("ProductId");
-
-                    b.HasIndex("CategoryId");
 
                     b.ToTable("Products");
                 });
@@ -410,10 +381,6 @@ namespace Project_Admin.Migrations
                     b.Property<string>("NormalizedUserName")
                         .HasMaxLength(256);
 
-                    b.Property<string>("Password")
-                        .IsRequired()
-                        .HasMaxLength(50);
-
                     b.Property<string>("PasswordHash");
 
                     b.Property<string>("PhoneNumber");
@@ -427,7 +394,6 @@ namespace Project_Admin.Migrations
                         .HasMaxLength(50);
 
                     b.Property<string>("Tel")
-                        .IsRequired()
                         .HasMaxLength(50);
 
                     b.Property<bool>("TwoFactorEnabled");
@@ -528,14 +494,6 @@ namespace Project_Admin.Migrations
                     b.HasOne("Project_Admin.Models.Product", "Product")
                         .WithMany()
                         .HasForeignKey("ProductId")
-                        .OnDelete(DeleteBehavior.Cascade);
-                });
-
-            modelBuilder.Entity("Project_Admin.Models.Product", b =>
-                {
-                    b.HasOne("Project_Admin.Models.Category", "Category")
-                        .WithMany()
-                        .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 

@@ -28,11 +28,9 @@ namespace Project_Admin.Models
         public string Surname { get; set; }
 
 
-        [Required]
-        [StringLength(50, MinimumLength = 1)]
-        public string Password { get; set; }
+      
 
-        [Required]
+        
         [StringLength(50, MinimumLength = 1)]
         public string Tel { get; set; }
 

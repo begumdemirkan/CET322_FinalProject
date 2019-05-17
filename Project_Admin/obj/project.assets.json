@@ -12946,11 +12946,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Begum\\Desktop\\CET322_FinalProject\\Project_Admin\\Project_Admin.csproj",
+      "projectUniqueName": "C:\\Users\\Begum\\Desktop\\nolur\\CET322_FinalProject\\Project_Admin\\Project_Admin.csproj",
       "projectName": "Project_Admin",
-      "projectPath": "C:\\Users\\Begum\\Desktop\\CET322_FinalProject\\Project_Admin\\Project_Admin.csproj",
+      "projectPath": "C:\\Users\\Begum\\Desktop\\nolur\\CET322_FinalProject\\Project_Admin\\Project_Admin.csproj",
       "packagesPath": "C:\\Users\\Begum\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Begum\\Desktop\\CET322_FinalProject\\Project_Admin\\obj\\",
+      "outputPath": "C:\\Users\\Begum\\Desktop\\nolur\\CET322_FinalProject\\Project_Admin\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
