@@ -29,32 +29,35 @@
 </head>
 <body class="animsition">
     <div class="page-wrapper">
-        @RenderBody()
+
         <!-- HEADER DESKTOP-->
         <header class="header-desktop3 d-none d-lg-block">
+
             <div class="section__content section__content--p35">
                 <div class="header3-wrap">
+
                     <div class="header__logo">
                         <a href="#">
                             <img src="images/icon/logo-white.png" alt="CoolAdmin" />
                         </a>
                     </div>
                     <div class="header__navbar">
+
                         <ul class="list-unstyled">
                             <li class="has-sub">
                                 <a href="#">
-                                    <i class="fas fa-tachometer-alt"></i>Dashboard
+                                    <i class="fas fa-tachometer-alt"></i>Oyuncaklar
                                     <span class="bot-line"></span>
                                 </a>
                                 <ul class="header3-sub-list list-unstyled">
                                     <li>
-                                        <a href="index.html">Dashboard 1</a>
+                                        <a href="/products/">Peluş Oyuncaklar</a>
                                     </li>
                                     <li>
-                                        <a href="index2.html">Dashboard 2</a>
+                                        <a href="index2.html">Kutu Oyunları</a>
                                     </li>
                                     <li>
-                                        <a href="index3.html">Dashboard 3</a>
+                                        <a href="index3.html">Eğitici Oyunlar</a>
                                     </li>
                                     <li>
                                         <a href="index4.html">Dashboard 4</a>
@@ -526,9 +529,12 @@
         </div>
         <!-- END HEADER MOBILE -->
         <!-- PAGE CONTENT-->
+
         <div class="page-content--bgf7">
             <!-- BREADCRUMB-->
+            @RenderBody()
             <section class="au-breadcrumb2">
+
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
@@ -744,20 +750,20 @@
                             <div class="table-responsive table-responsive-data2">
                                 <table class="table table-data2">
                                     <thead>
-                                            <th>
-                                                <label class="au-checkbox">
-                                                    <input type="checkbox">
-                                                    <span class="au-checkmark"></span>
-                                                </label>
-                                            </th>
-                                            <th>name</th>
-                                            <th>email</th>
-                                            <th>description</th>
-                                            <th>date</th>
-                                            <th>status</th>
-                                            <th>price</th>
-                                            <th></th>
-                                        </tr>
+                                    <th>
+                                        <label class="au-checkbox">
+                                            <input type="checkbox">
+                                            <span class="au-checkmark"></span>
+                                        </label>
+                                    </th>
+                                    <th>name</th>
+                                    <th>email</th>
+                                    <th>description</th>
+                                    <th>date</th>
+                                    <th>status</th>
+                                    <th>price</th>
+                                    <th></th>
+                                    </tr>
                                     </thead>
                                     <tbody>
                                         <tr class="tr-shadow">
@@ -942,6 +948,28 @@
     <script src="~/adminn/vendor/chartjs/Chart.bundle.min.js"></script>
     <script src="~/adminn/vendor/select2/select2.min.js">
     </script>
+
+    <environment include="Development">
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    </environment>
+    <environment exclude="Development">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                asp-fallback-test="window.jQuery"
+                crossorigin="anonymous"
+                integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=">
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"
+                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"
+                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                crossorigin="anonymous"
+                integrity="sha256-E/V4cWE4qvAeO5MOhjtGtqDzPndRO1LBk8lJ/PR7CA4=">
+        </script>
+    </environment>
+    <script src="~/js/site.js" asp-append-version="true"></script>
     <!-- Main JS-->
     <script src="~/adminn/js/main.js"></script>
     @RenderSection("Scripts", required: false)

@@ -1,0 +1,60 @@
+﻿@model IEnumerable<Project_Admin.Models.Product>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container">
+    <br />
+    <br />
+    <div class="row">
+        <div class="col-6">
+            <h4>Peluş Oyuncaklar</h4>
+
+        </div>
+
+        <div class="col-6 text-right">
+            @*<a asp-area="Adminn" asp-controller="Products" asp-action="Create">Ürün Ekle</a>*@
+
+            <p>
+                <a href="/products/create" class="btn btn-info">Ürün Ekle</a>
+            </p>
+        </div>
+    </div>
+    <br />
+    <table class="table table table-striped border">
+
+        <tr class="table-info">
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th></th>
+        </tr>
+
+
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+
+                <td>
+                <td style="width:150px">
+                    <div class="btn-group" role="group">
+                        <a class="btn btn-primary" asp-action="Edit" asp-route-id="@item.ProductId"><i class="fas fa-edit"></i></a>
+                        <a class="btn btn-success" asp-action="Details" asp-route-id="@item.ProductId"><i class="fas fa-list"></i></a>
+                        <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.ProductId"><<i class="fas fa-trash"></i></a>
+                    </div>
+                </td>
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>
+ 
+
+
+

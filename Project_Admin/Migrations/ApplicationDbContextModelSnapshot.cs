@@ -268,23 +268,9 @@ namespace Project_Admin.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<DateTime>("CreateDate");
-
-                    b.Property<int>("CreateUserId");
-
-                    b.Property<int>("ProductId");
-
                     b.Property<int>("Quantity");
 
-                    b.Property<DateTime?>("UpdateDate");
-
-                    b.Property<int?>("UpdateUserId");
-
-                    b.Property<int>("UserId");
-
                     b.HasKey("SepetId");
-
-                    b.HasIndex("ProductId");
 
                     b.ToTable("Sepets");
                 });
@@ -491,14 +477,6 @@ namespace Project_Admin.Migrations
                         .HasForeignKey("OrderId")
                         .OnDelete(DeleteBehavior.Cascade);
 
-                    b.HasOne("Project_Admin.Models.Product", "Product")
-                        .WithMany()
-                        .HasForeignKey("ProductId")
-                        .OnDelete(DeleteBehavior.Cascade);
-                });
-
-            modelBuilder.Entity("Project_Admin.Models.Sepet", b =>
-                {
                     b.HasOne("Project_Admin.Models.Product", "Product")
                         .WithMany()
                         .HasForeignKey("ProductId")

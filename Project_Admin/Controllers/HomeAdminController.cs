@@ -10,7 +10,7 @@ namespace Project_Admin.Areas.Adminn.Controllers
 {
     public class HomeAdminController : Controller
     {
-        [Area("Adminn")]
+    
        
             public IActionResult Index()
             {

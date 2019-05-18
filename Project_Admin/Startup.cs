@@ -98,21 +98,26 @@ namespace Project_Admin
             app.UseCookiePolicy();
 
             app.UseAuthentication();
-
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
-                  name: "areas",
-                  template: "{area=Adminn}/{controller=HomeAdmin}/{action=Index}/{id?}"
-                );
+                    name: "default",
+                    template: "{controller=HomeAdmin}/{action=Index}/{id?}");
             });
-            app.UseMvc(routes =>
-            {
-                routes.MapRoute(
-                  name: "areas",
-                  template: "{area=Customer}/{controller=Home}/{action=Index}/{id?}"
-                );
-            });
+            //app.UseMvc(routes =>
+            //{
+            //    routes.MapRoute(
+            //      name: "areas",
+            //      template: "{area=Adminn}/{controller=HomeAdmin}/{action=Index}/{id?}"
+            //    );
+            //});
+            //app.UseMvc(routes =>
+            //{
+            //    routes.MapRoute(
+            //      name: "areas",
+            //      template: "{area=Customer}/{controller=Home}/{action=Index}/{id?}"
+            //    );
+            //});
         }
     }
 }

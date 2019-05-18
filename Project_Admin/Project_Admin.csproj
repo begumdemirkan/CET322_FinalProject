@@ -18,11 +18,14 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Remove="Controllers\ProductsController.cs" />
     <Compile Remove="Migrations\20190517132834_nel.cs" />
     <Compile Remove="Migrations\20190517132834_nel.Designer.cs" />
     <Compile Remove="Migrations\20190517132851_n.cs" />
     <Compile Remove="Migrations\20190517132851_n.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Views\Shared\TableButton.cshtml" />
   </ItemGroup>
 
 
@@ -34,10 +37,14 @@
 
 
   <ItemGroup>
+    <Folder Include="Areas\Adminn\Controllers\" />
     <Folder Include="Areas\Adminn\Data\" />
     <Folder Include="Areas\Adminn\Models\" />
+    <Folder Include="Areas\Adminn\Views\" />
+    <Folder Include="Areas\Customer\Controllers\" />
     <Folder Include="Areas\Customer\Data\" />
     <Folder Include="Areas\Customer\Models\" />
+    <Folder Include="Areas\Customer\Views\" />
   </ItemGroup>
 
 

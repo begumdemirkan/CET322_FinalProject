@@ -9,36 +9,38 @@ namespace Project_Admin.Models
 {
     public class Product
     {
+        
         public int ProductId { get; set; }
 
-        public DateTime CreateDate { get; set; }
+        //public DateTime CreateDate { get; set; }
 
-        public int CreateUserId { get; set; }
+        //public int CreateUserId { get; set; }
 
-        public DateTime? UpdateDate { get; set; }
+        //public DateTime? UpdateDate { get; set; }
 
-        public int? UpdateUserId { get; set; }
+        //public int? UpdateUserId { get; set; }
         [Required]
+        [Display(Name = "Oyuncak Adı")]
         public string Name { get; set; }
 
-        public int CategoryId { get; set; }
+        //public int CategoryId { get; set; }
+        //[Display(Name = "Oyun Kategorisi")]
+        //public Category Category { get; set; }
 
-        public Category Category { get; set; }
+        //public string Brand { get; set; }
 
-        public string Brand { get; set; }
+        //public string Model { get; set; }
 
-        public string Model { get; set; }
+        //public string Description { get; set; }
+       
+        //public double Price { get; set; }
+        //[Column(TypeName = "decimal(18,2)")]
+        //public decimal Discount { get; set; }
 
-        public string Description { get; set; }
-        [Column(TypeName = "decimal(18,2)")]
-        public decimal Price { get; set; }
-        [Column(TypeName = "decimal(18,2)")]
-        public decimal Discount { get; set; }
+        //public int Stock { get; set; }
 
-        public int Stock { get; set; }
+        //public bool Available { get; set; }
 
-        public bool IsActive { get; set; }
-
-        public string ImageUrl { get; set; }
+        //public string ImageUrl { get; set; }
     }
 }
