@@ -17,11 +17,11 @@ namespace Project_Admin.Data
 
         public DbSet<Userr> Userrs { get; set; }
 
-        public DbSet<Produc> Produc { get; set; }
+        public DbSet<Product> Products { get; set; }
+
+        public DbSet<Project_Admin.Models.Category> Category { get; set; }
 
         public DbSet<UserAddress> Addresses { get; set; }
-
-        public DbSet<Product> Products { get; set; }
 
         public DbSet<Statu> Status { get; set; }
 

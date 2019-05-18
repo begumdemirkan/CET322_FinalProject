@@ -8,24 +8,27 @@
 
   <ItemGroup>
     <Compile Remove="Areas\Admin\**" />
+    <Compile Remove="Migrations\**" />
     <Compile Remove="wwwroot\web\**" />
     <Content Remove="Areas\Admin\**" />
+    <Content Remove="Migrations\**" />
     <Content Remove="wwwroot\web\**" />
     <EmbeddedResource Remove="Areas\Admin\**" />
+    <EmbeddedResource Remove="Migrations\**" />
     <EmbeddedResource Remove="wwwroot\web\**" />
     <None Remove="Areas\Admin\**" />
+    <None Remove="Migrations\**" />
     <None Remove="wwwroot\web\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Remove="Migrations\20190517132834_nel.cs" />
-    <Compile Remove="Migrations\20190517132834_nel.Designer.cs" />
-    <Compile Remove="Migrations\20190517132851_n.cs" />
-    <Compile Remove="Migrations\20190517132851_n.Designer.cs" />
+    <Content Remove="Views\Shared\TableButton.cshtml" />
   </ItemGroup>
 
   <ItemGroup>
-    <Content Remove="Views\Shared\TableButton.cshtml" />
+    <Compile Include="Migrations\20190518051906_ilk.cs" />
+    <Compile Include="Migrations\20190518051906_ilk.Designer.cs" />
+    <Compile Include="Migrations\ApplicationDbContextModelSnapshot.cs" />
   </ItemGroup>
 
 
@@ -49,6 +52,11 @@
 
 
   <ItemGroup>
+    <None Include="Views\Products\Create.cshtml" />
+    <None Include="Views\Products\Delete.cshtml" />
+    <None Include="Views\Products\Details.cshtml" />
+    <None Include="Views\Products\Edit.cshtml" />
+    <None Include="Views\Products\Index.cshtml" />
     <None Include="wwwroot\adminn\fonts\fontawesome-webfont.svg" />
     <None Include="wwwroot\adminn\fonts\fontawesome-webfont.woff2" />
     <None Include="wwwroot\adminn\fonts\glyphicons-halflings-regular.woff2" />

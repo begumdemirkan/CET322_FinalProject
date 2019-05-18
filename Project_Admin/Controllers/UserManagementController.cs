@@ -32,7 +32,7 @@ namespace Project_Admin.Controllers
                 var userList = _context
                     .Users
                     .ToList();
-                ViewData["CategoryId"] = new SelectList(_context.Categories, "Id", "Name", -1);
+                ViewData["CategoryId"] = new SelectList(_context.Category, "Id", "Name", -1);
                 List<UserModel> userModelList = new List<UserModel>();
 
                 foreach (var item in userList)

@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -7,19 +9,14 @@ namespace Project_Admin.Models
 {
     public class Category
     {
-            public int CategoryId { get; set; }
+        [Key]
+        public int ProductId { get; set; }
 
-            public DateTime CreateDate { get; set; }
+        
+        [Display(Name = "Oyuncak Adı")]
+        public string Name { get; set; }
+        public virtual IList<Product> Products { get; set; }
 
-            public int CreateUserId { get; set; }
 
-            public DateTime? UpdateDate { get; set; }
-
-            public int? UpdateUserId { get; set; }
-
-            public int ParentId { get; set; } = 0;
-
-            public bool IsActive { get; set; }
-        }
-    
+    }
 }

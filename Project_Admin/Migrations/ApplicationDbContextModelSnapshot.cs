@@ -135,25 +135,15 @@ namespace Project_Admin.Migrations
 
             modelBuilder.Entity("Project_Admin.Models.Category", b =>
                 {
-                    b.Property<int>("CategoryId")
+                    b.Property<int>("ProductId")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<DateTime>("CreateDate");
+                    b.Property<string>("Name");
 
-                    b.Property<int>("CreateUserId");
+                    b.HasKey("ProductId");
 
-                    b.Property<bool>("IsActive");
-
-                    b.Property<int>("ParentId");
-
-                    b.Property<DateTime?>("UpdateDate");
-
-                    b.Property<int?>("UpdateUserId");
-
-                    b.HasKey("CategoryId");
-
-                    b.ToTable("Categories");
+                    b.ToTable("Category");
                 });
 
             modelBuilder.Entity("Project_Admin.Models.Order", b =>
@@ -250,14 +240,26 @@ namespace Project_Admin.Migrations
 
             modelBuilder.Entity("Project_Admin.Models.Product", b =>
                 {
-                    b.Property<int>("ProductId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<bool>("Available");
+
+                    b.Property<int>("CategoryId");
+
+                    b.Property<string>("ImageUrl");
 
                     b.Property<string>("Name")
                         .IsRequired();
 
-                    b.HasKey("ProductId");
+                    b.Property<decimal>("Price");
+
+                    b.Property<int>("Quantity");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CategoryId");
 
                     b.ToTable("Products");
                 });
@@ -477,9 +479,17 @@ namespace Project_Admin.Migrations
                         .HasForeignKey("OrderId")
                         .OnDelete(DeleteBehavior.Cascade);
 
-                    b.HasOne("Project_Admin.Models.Product", "Product")
+                    b.HasOne("Project_Admin.Models.Category", "Product")
                         .WithMany()
                         .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("Project_Admin.Models.Product", b =>
+                {
+                    b.HasOne("Project_Admin.Models.Category", "Categories")
+                        .WithMany("Products")
+                        .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 

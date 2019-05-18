@@ -23,6 +23,6 @@ namespace Project_Admin.Models
 
         public int QuantityId { get; set; }
 
-        public Product Product { get; set; }
+        public Category Product { get; set; }
     }
 }
